@@ -50,7 +50,7 @@ class DecisionTree:
             leaf_value = self._most_common_label(y)
             return Node(value=leaf_value)
         
-        # get n_feats random numbers b/w 0 and n_features
+        # get n_feats random numbers b/w 0 and n_features - 1
         feat_idxs = np.random.choice(n_features, self.n_feats, replace=False)
 
         # greedy search
